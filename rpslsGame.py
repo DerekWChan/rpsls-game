@@ -10,15 +10,15 @@ def interface():
     # 2 = Scissor
     # 3 = Lizard
     # 4 = Spock
-    actions = ['Rock', 'Paper', 'Scissor', 'Lizard', 'Spock']
+    actions = ['rock', 'paper', 'scissor', 'lizard', 'spock']
     # Priority of actions
-    strategy = {'Rock'      : ['Scissor', 'Lizard'], 
-                'Paper'     : ['Rock', 'Spock'], 
-                'Scissor'   : ['Paper', 'Lizard'],
-                'Lizard'    : ['Paper', 'Spock'],
-                'Spock'     : ['Rock', 'Scissor']}
+    strategy = {'rock'      : ['scissor', 'lizard'], 
+                'paper'     : ['rock', 'spock'], 
+                'scissor'   : ['paper', 'lizard'],
+                'lizard'    : ['paper', 'spock'],
+                'spock'     : ['rock', 'scissor']}
     compAction = actions[randint(0, 4)]
-    userAction = raw_input("Choose an action:\n")
+    userAction = raw_input("Choose an action:\n").lower()
     print ""
     # Invalid action given
     if userAction not in actions:
