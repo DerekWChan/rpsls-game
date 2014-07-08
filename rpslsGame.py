@@ -46,7 +46,7 @@ def interface():
         playAgain()
 
 def playAgain():
-    userChoice = raw_input("Play again? (y/n)")
+    userChoice = raw_input("Play again? (y/n)").lower()
     if userChoice == 'y':
         interface()
 
